@@ -8,7 +8,7 @@ const port = process.env.PORT
 // Connect to database
 connectDB()
 
-let whitelist = [process.env.FRONTEND_URL]
+const whitelist = [process.env.FRONTEND_URL]
 
 app.use(
   express.json(),
