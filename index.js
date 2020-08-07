@@ -1,17 +1,18 @@
-const express = require('express');
-const connectDB = require('./config/db');
+require("dotenv").config()
+const express = require("express")
+const connectDB = require("./config/db")
 
-const app = express();
+const app = express()
 
 // Connect to database
-connectDB();
+connectDB()
 
-app.use(express.json());
+app.use(express.json())
 
 // Define Routes
-app.use('/', require('./routes/index'));
-app.use('/api/url', require('./routes/url'));
+app.use("/", require("./routes/index"))
+app.use("/api/url", require("./routes/url"))
 
-const PORT = 5000;
+const PORT = 5000
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
