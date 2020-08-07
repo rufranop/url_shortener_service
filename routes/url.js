@@ -42,11 +42,11 @@ router.post("/shorten", async (req, res) => {
       }
     } catch (err) {
       console.error(err)
-      res.status(500).json("Server error")
+      res.status(500).json({ error: "Server error" })
     }
-  } else {
-    res.status(401).json("Invalid long url")
   }
+
+  res.status(422).json({ error: "Invalid long url" })
 })
 
 module.exports = router
