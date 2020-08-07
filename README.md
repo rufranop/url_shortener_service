@@ -1,22 +1,33 @@
 # URL Shortener Service
 
-> API to create short urls using Node, Express and MongoDB
+API to create short URLs using Node, Express and MongoDB
 
-## Quick Start
+## Setup
+
+Copy the env example and complete the Mongo URI and Base URL for your application
+
+```
+cp .env.example .env
+```
+
+## Install dependencies
 
 ```bash
-# Install dependencies
 npm install
+```
 
-# Edit the default.json file with your mongoURI and baseUrl
-# Use production.json in production env
+## Run the service
 
-# Run
+```
 npm start
 ```
 
 ## Endpoint to create short url
 
-### POST api/url/shorten
+**POST** to `api/url/shorten` with the following payload
 
-{ "longUrl": "xxxx" }
+```json
+{
+  "longUrl": "xxxx"
+}
+```
